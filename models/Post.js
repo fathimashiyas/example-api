@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
   slug: {
     type: String,
-    required: true,
+    required: [true,'Please add slug'],
   },
   title: {
     type: String,
-    required: true,
+    required: [true,'Please add title'],
   },
   published: {
     type: Date,
@@ -15,11 +15,11 @@ const postSchema = new mongoose.Schema({
   },
   author: {
     type: String,
-    required: true,
+    required: [true,'Please add author'],
   },
   content: {
     type: String,
-    required: true,
+    required: [true,'Please add content'],
   },
 });
 
